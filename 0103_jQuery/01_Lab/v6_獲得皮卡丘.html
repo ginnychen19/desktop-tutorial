@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p>v6: 該如何在console顯示「皮卡丘」字串？</p>
+    <script>
+        function cat() {
+            return "皮卡丘";
+        }
+        /*  如果你直接传入 cat 函数，
+        那么在 apple 函数内部将无法调用这个函数，并且将无法得到函数的返回值。
+        
+        如果你希望在 apple 函数内部调用 cat 函数，并且得到函数的返回值，
+        那么你需要在 apple 函数内部调用 cat 函数 
+        */
+        function apple(cat) {
+            var result = cat();
+            console.log(result);
+        }
+        apple(cat); // 這裡該怎麼做?
+    </script>
+
+    <script>
+        //老師的-------------------------------------------------------
+        function cat() {
+            return "皮卡丘";
+        }
+        /*目前正在做的事是
+          當我呼叫apple function 時，將cat function帶入
+       */
+        function apple(cat) {
+            var result = cat();
+            console.log(cat);
+        }
+        apple(cat); // 這裡該怎麼做?
+    </script>
+
+
+
+
+</body>
+
+</html>

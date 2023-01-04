@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p>v8: 該如何在console顯示「皮卡丘」字串？</p>
+    <script>
+        // ai的------------------------------------
+        // a().b() 的意思是呼叫 a() 函式的回傳值 (return value) 的一個名為 b 的屬性或方法。
+        function a() {
+            return {
+                b: function () {
+                    console.log("皮卡丘");
+                }
+            };
+        }
+        // 目標: 希望底下這一行執行完log就有一隻皮卡丘 
+        a().b(); 
+    </script>
+
+<script>
+    // 老師的------------------------------------
+    function a() {
+        return {
+            b: function () {
+                return "皮卡丘";
+            }
+        };
+    }
+    // 目標: 希望底下這一行執行完log就有一隻皮卡丘 
+    /*a()要回傳一個物件{}，才能使用.*/
+    var tamp = a().b(); 
+    console.log(tamp);
+</script>
+</body>
+
+</html>
